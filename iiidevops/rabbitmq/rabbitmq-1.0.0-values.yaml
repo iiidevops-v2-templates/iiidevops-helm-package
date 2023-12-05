@@ -1,0 +1,44 @@
+git:
+  repoName: "project"
+
+harbor:
+  host: "localhost:32443"
+
+timezone:
+  tz: Asia/Taipei
+
+### Specific ###
+
+rbmq:
+  server_port: 5672
+  webui_port: 15672
+  imageTag: "dockerhub/rabbitmq:3-management"
+  username: "guest"
+  password: "guest"
+
+imagePullSecrets:
+  - name: harbor-local
+
+kube:
+  ingress:
+    base_domain: ""
+    proxy_body_size: ""
+
+# 資源使用
+resources: {}
+
+## @section Persistence Parameters
+## Persistence Parameters
+## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+##
+persistence:
+  ## @param persistence.enabled Enable persistence using Persistent Volume Claims
+  ##
+  enabled: false
+  ## @param persistence.accessModes [array] Persistent Volume access modes
+  ##
+  accessModes:
+    - ReadWriteMany
+  ## @param persistence.size Persistent Volume size
+  ##
+  size: 100Mi

@@ -1,0 +1,21 @@
+{
+    "rabbitmq": {
+        "3": {
+            "chart_name": "rabbitmq",
+            "chart_version": "1.0.0",
+            "verion": "3",
+            "arguments": [
+                {
+                    "key": "rbmq.username",
+                    "display": "RabbitMQ Username",
+                    "input_type": "text"
+                },
+                {
+                    "key": "rbmq.password",
+                    "display": "RabbitMQ Password",
+                    "input_type": "password"
+                }
+            ]
+        }
+    }
+}
