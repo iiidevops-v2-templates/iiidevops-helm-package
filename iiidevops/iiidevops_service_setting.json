@@ -3,7 +3,7 @@
         "3": {
             "chart_name": "rabbitmq",
             "chart_version": "1.0.0",
-            "verion": "3",
+            "version": "3",
             "arguments": [
                 {
                     "key": "rbmq.username",
@@ -14,6 +14,11 @@
                     "key": "rbmq.password",
                     "display": "RabbitMQ Password",
                     "input_type": "password"
+                },
+                {
+                    "key": "persistence.enabled",
+                    "value": "false",
+                    "input_type": "volumes"
                 }
             ]
         }
