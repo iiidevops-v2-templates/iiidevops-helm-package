@@ -15,6 +15,7 @@ rbmq:
   imageTag: "dockerhub/rabbitmq:3-management"
   username: "guest"
   password: "guest"
+  id: 000
 
 imagePullSecrets:
   - name: harbor-local
