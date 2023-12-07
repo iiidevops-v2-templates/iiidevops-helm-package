@@ -1,5 +1,5 @@
 {
-    "rabbitmq": {
+    "RabbitMQ": {
         "3": {
             "chart_name": "rabbitmq",
             "chart_version": "1.0.0",
@@ -14,6 +14,33 @@
                     "key": "rbmq.password",
                     "display": "RabbitMQ Password",
                     "input_type": "password"
+                },
+                {
+                    "key": "rbmq.id",
+                    "input_type": "id"
+                },
+                {
+                    "key": "persistence.enabled",
+                    "value": "false",
+                    "input_type": "volumes"
+                }
+            ]
+        }
+    },
+    "Microsoft SQL Server Linux": {
+        "2019": {
+            "chart_name": "mssql-server",
+            "chart_version": "1.0.0",
+            "version": "2019",
+            "arguments": [
+                {
+                    "key": "auth.saPassword",
+                    "display": "Microsoft SQL Server Password for sa",
+                    "input_type": "password"
+                },
+                {
+                    "key": "mssql.id",
+                    "input_type": "id"
                 },
                 {
                     "key": "persistence.enabled",
