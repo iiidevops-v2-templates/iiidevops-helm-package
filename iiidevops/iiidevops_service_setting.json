@@ -22,7 +22,7 @@
                 {
                     "key": "persistence.enabled",
                     "value": "false",
-                    "input_type": "volumes"
+                    "input_type": "volume"
                 }
             ]
         }
@@ -45,7 +45,7 @@
                 {
                     "key": "persistence.enabled",
                     "value": "false",
-                    "input_type": "volumes"
+                    "input_type": "volume"
                 }
             ]
         }
