@@ -1,0 +1,87 @@
+### IIIdevops Commons ###
+pipeline:
+  # The pipeline sequence
+  sequence: 0
+  # The default timeout seconds for the job
+  timeout: 3600
+  # The default seconds to delete the job after finished
+  ttlSecondsAfterFinished: null
+  # Failed jobs limit
+  backoffLimit: 3
+
+# The iiidevops API usage
+api:
+  # The iiidevops API URL
+  url: ""
+  # The iiidevops API username
+  username: ""
+  # The iiidevops API password
+  password: ""
+
+git:
+  url: "http://gitlab.your.domain/project.git"
+  repoName: "project"
+  branch: "master"
+  commitID: "abc1234"
+  token: "glpat-xxxxxxxxx"
+
+harbor:
+  host: "localhost:32443"
+
+timezone:
+  tz: Asia/Taipei
+
+### Specific ###
+
+# db可選型態
+# "mysql"、"mariadb"、"postgresql"、"mongodb"、"custom"
+# web.port 僅 custom時候使用
+db:
+  gui: true
+  type: "mariadb"
+  username: "bear"
+  password: "bearbearbear"
+  name: "bearDB"
+  tag: "latest"
+  id: 001
+
+service:
+  type: NodePort
+  nodePort: 30080
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+## Configure extra options for liveness and readiness probes
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes)
+##
+livenessProbe:
+  enabled: true
+  initialDelaySeconds: 30
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
+
+readinessProbe:
+  enabled: true
+  initialDelaySeconds: 5
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
+
+volumeMounts:
+  hostPath:
+    enabled: false
+    path: '/project-data'
+  nfs:
+    enabled: false
+    server: localhost
+    path: '/iiidevopsNFS/devops-data/project-data'
+  project: 'default'
+  uuid: 'project-uuid'
