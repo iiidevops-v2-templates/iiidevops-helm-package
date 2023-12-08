@@ -49,5 +49,38 @@
                 }
             ]
         }
+    },
+    "MariaDB": {
+        "10.5": {
+            "chart_name": "rabbitmq",
+            "chart_version": "1.0.0",
+            "version": "3",
+            "arguments": [
+                {
+                    "key": "db.name",
+                    "display": "DB_Name",
+                    "input_type": "text"
+                },
+                {
+                    "key": "db.username",
+                    "display": "Username",
+                    "input_type": "text"
+                },
+                {
+                    "key": "db.password",
+                    "display": "Password",
+                    "input_type": "password"
+                },
+                {
+                    "key": "db.id",
+                    "input_type": "id"
+                },
+                {
+                    "key": "persistence.enabled",
+                    "value": "false",
+                    "input_type": "volume"
+                }
+            ]
+        }
     }
 }
