@@ -22,9 +22,6 @@ timezone:
 
 ### Specific ###
 
-# db可選型態
-# "mysql"、"mariadb"、"postgresql"、"mongodb"、"custom"
-# web.port 僅 custom時候使用
 db:
   gui: true
   type: "mariadb"
@@ -32,7 +29,7 @@ db:
   password: "DevOps_123"
   name: "iiidevops"
   tag: "10.5"
-  id: 001
+  id: "001"
 
 service:
   type: NodePort
