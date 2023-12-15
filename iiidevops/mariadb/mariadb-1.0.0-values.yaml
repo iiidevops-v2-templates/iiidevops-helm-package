@@ -29,9 +29,9 @@ db:
   gui: true
   type: "mariadb"
   username: "iiidevops"
-  password: "Test12345!"
+  password: "DevOps_123"
   name: "iiidevops"
-  tag: "mariadb"
+  tag: "10.5"
   id: 001
 
 service:
