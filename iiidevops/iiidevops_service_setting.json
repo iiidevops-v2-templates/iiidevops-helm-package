@@ -6,6 +6,11 @@
             "version": "3",
             "arguments": [
                 {
+                    "key": "git.repoName",
+                    "system": "project_name",
+                    "input_type": "text"
+                },
+                {
                     "key": "rbmq.username",
                     "display": "RabbitMQ Username",
                     "input_type": "text"
@@ -34,6 +39,11 @@
             "version": "2019",
             "arguments": [
                 {
+                    "key": "git.repoName",
+                    "system": "project_name",
+                    "input_type": "text"
+                },
+                {
                     "key": "auth.saPassword",
                     "display": "Microsoft SQL Server Password for sa",
                     "input_type": "password"
@@ -56,6 +66,11 @@
             "chart_version": "1.0.0",
             "version": "10.5",
             "arguments": [
+                {
+                    "key": "git.repoName",
+                    "system": "project_name",
+                    "input_type": "text"
+                },
                 {
                     "key": "db.name",
                     "display": "DB_Name",
