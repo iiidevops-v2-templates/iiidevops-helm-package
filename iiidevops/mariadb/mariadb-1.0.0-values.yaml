@@ -76,3 +76,8 @@ persistence:
   ## @param persistence.size Persistent Volume size
   ##
   size: 100Mi
+
+kube:
+  ingress:
+    base_domain: ""
+    proxy_body_size: ""
