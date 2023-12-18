@@ -52,9 +52,9 @@
     },
     "MariaDB": {
         "10.5": {
-            "chart_name": "rabbitmq",
+            "chart_name": "mariadb",
             "chart_version": "1.0.0",
-            "version": "3",
+            "version": "10.5",
             "arguments": [
                 {
                     "key": "db.name",
