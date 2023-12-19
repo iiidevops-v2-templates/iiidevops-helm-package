@@ -25,10 +25,6 @@
                     "value": "false",
                     "display": "true",
                     "input_type": "volume"
-                },
-                {
-                    "display": "SQL/JSON",
-                    "input_type": "upload_file"
                 }
             ]
         }
@@ -52,6 +48,10 @@
                     "key": "persistence.enabled",
                     "value": "false",
                     "input_type": "volume"
+                },
+                {
+                    "display": "SQL",
+                    "input_type": "upload_file"
                 }
             ]
         }
@@ -89,7 +89,7 @@
                     "input_type": "volume"
                 },
                 {
-                    "display": "SQL/JSON",
+                    "display": "SQL",
                     "input_type": "upload_file"
                 }
             ]
