@@ -21,8 +21,14 @@
                 },
                 {
                     "key": "persistence.enabled",
+                    "size": "persistence.size",
                     "value": "false",
+                    "display": "true",
                     "input_type": "volume"
+                },
+                {
+                    "display": "SQL/JSON",
+                    "input_type": "upload_file"
                 }
             ]
         }
@@ -77,8 +83,14 @@
                 },
                 {
                     "key": "persistence.enabled",
+                    "size": "persistence.size",
                     "value": "false",
+                    "display": "true",
                     "input_type": "volume"
+                },
+                {
+                    "display": "SQL/JSON",
+                    "input_type": "upload_file"
                 }
             ]
         }
