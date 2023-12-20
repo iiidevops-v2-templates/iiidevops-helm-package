@@ -49,4 +49,4 @@ persistence:
 kube:
   ingress:
     base_domain: ""
-    proxy_body_size: ""
+    proxy_body_size: "100m"
