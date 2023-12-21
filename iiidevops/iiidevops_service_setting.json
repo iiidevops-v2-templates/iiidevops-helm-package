@@ -1,4 +1,85 @@
 {
+    
+    "MongoDB": {
+        "4.4": {
+            "chart_name": "mongodb",
+            "chart_version": "1.0.0",
+            "version": "4.4",
+            "arguments": [
+                {
+                    "key": "db.name",
+                    "display": "DB_Name",
+                    "input_type": "text"
+                },
+                {
+                    "key": "db.username",
+                    "display": "Username",
+                    "input_type": "text"
+                },
+                {
+                    "key": "db.password",
+                    "display": "Password",
+                    "input_type": "password"
+                },
+                {
+                    "key": "db.id",
+                    "input_type": "id"
+                },
+                {
+                    "key": "persistence.enabled",
+                    "size": "persistence.size",
+                    "value": "false",
+                    "display": "enable_volume",
+                    "input_type": "volume"
+                },
+                {
+                    "display": "SQL",
+                    "input_type": "upload_file"
+                }
+            ]
+        },
+        "5.0.23": {
+            "chart_name": "mongodb",
+            "chart_version": "1.0.0",
+            "version": "5.0.23",
+            "arguments": [
+                {
+                    "key": "db.name",
+                    "display": "DB_Name",
+                    "input_type": "text"
+                },
+                {
+                    "key": "db.username",
+                    "display": "Username",
+                    "input_type": "text"
+                },
+                {
+                    "key": "db.password",
+                    "display": "Password",
+                    "input_type": "password"
+                },
+                {
+                    "key": "db.id",
+                    "input_type": "id"
+                },
+                {
+                    "key": "db.tag",
+                    "input_type": "5.0.23-debian-11-r3"
+                },
+                {
+                    "key": "persistence.enabled",
+                    "size": "persistence.size",
+                    "value": "false",
+                    "display": "enable_volume",
+                    "input_type": "volume"
+                },
+                {
+                    "display": "SQL",
+                    "input_type": "upload_file"
+                }
+            ]
+        }
+    },
     "RabbitMQ": {
         "3": {
             "chart_name": "rabbitmq",
@@ -42,6 +123,45 @@
                 },
                 {
                     "key": "mssql.id",
+                    "input_type": "id"
+                },
+                {
+                    "key": "persistence.enabled",
+                    "size": "persistence.size",
+                    "value": "false",
+                    "display": "enable_volume",
+                    "input_type": "volume"
+                },
+                {
+                    "display": "SQL",
+                    "input_type": "upload_file"
+                }
+            ]
+        }
+    },
+    "MySQL": {
+        "8.2.0": {
+            "chart_name": "mysql",
+            "chart_version": "1.0.0",
+            "version": "8.2.0",
+            "arguments": [
+                {
+                    "key": "db.name",
+                    "display": "DB_Name",
+                    "input_type": "text"
+                },
+                {
+                    "key": "db.username",
+                    "display": "Username",
+                    "input_type": "text"
+                },
+                {
+                    "key": "db.password",
+                    "display": "Password",
+                    "input_type": "password"
+                },
+                {
+                    "key": "db.id",
                     "input_type": "id"
                 },
                 {
