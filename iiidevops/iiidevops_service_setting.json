@@ -23,7 +23,7 @@
                     "key": "persistence.enabled",
                     "size": "persistence.size",
                     "value": "false",
-                    "display": "true",
+                    "display": "enable_volume",
                     "input_type": "volume"
                 }
             ]
@@ -46,7 +46,9 @@
                 },
                 {
                     "key": "persistence.enabled",
+                    "size": "persistence.size",
                     "value": "false",
+                    "display": "enable_volume",
                     "input_type": "volume"
                 },
                 {
@@ -85,7 +87,7 @@
                     "key": "persistence.enabled",
                     "size": "persistence.size",
                     "value": "false",
-                    "display": "true",
+                    "display": "enable_volume",
                     "input_type": "volume"
                 },
                 {
@@ -126,7 +128,7 @@
                     "key": "persistence.enabled",
                     "size": "persistence.size",
                     "value": "false",
-                    "display": "true",
+                    "display": "enable_volume",
                     "input_type": "volume"
                 },
                 {
