@@ -139,6 +139,86 @@
             ]
         }
     },
+    "PostgreSQL": {
+        "13.13.0": {
+            "chart_name": "postgres",
+            "chart_version": "1.0.0",
+            "version": "13.13.0",
+            "arguments": [
+                {
+                    "key": "db.name",
+                    "display": "DB_Name",
+                    "input_type": "text"
+                },
+                {
+                    "key": "db.username",
+                    "display": "Username",
+                    "input_type": "text"
+                },
+                {
+                    "key": "db.password",
+                    "display": "Password",
+                    "input_type": "password"
+                },
+                {
+                    "key": "db.id",
+                    "input_type": "id"
+                },
+                {
+                    "key": "persistence.enabled",
+                    "size": "persistence.size",
+                    "value": "false",
+                    "display": "enable_volume",
+                    "input_type": "volume"
+                },
+                {
+                    "display": "SQL",
+                    "input_type": "upload_file"
+                }
+            ]
+        },
+        "16.1.0": {
+            "chart_name": "postgres",
+            "chart_version": "1.0.0",
+            "version": "16.1.0",
+            "arguments": [
+                {
+                    "key": "db.name",
+                    "display": "DB_Name",
+                    "input_type": "text"
+                },
+                {
+                    "key": "db.username",
+                    "display": "Username",
+                    "input_type": "text"
+                },
+                {
+                    "key": "db.password",
+                    "display": "Password",
+                    "input_type": "password"
+                },
+                {
+                    "key": "db.id",
+                    "input_type": "id"
+                },
+                {
+                    "key": "db.tag",
+                    "input_type": "16.1.0"
+                },
+                {
+                    "key": "persistence.enabled",
+                    "size": "persistence.size",
+                    "value": "false",
+                    "display": "enable_volume",
+                    "input_type": "volume"
+                },
+                {
+                    "display": "SQL",
+                    "input_type": "upload_file"
+                }
+            ]
+        }
+    },
     "MySQL": {
         "8.2.0": {
             "chart_name": "mysql",
