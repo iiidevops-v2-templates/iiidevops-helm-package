@@ -12,10 +12,10 @@ timezone:
 rbmq:
   server_port: 5672
   webui_port: 15672
-  imageTag: "dockerhub/rabbitmq:3-management"
+  imageTag: "3-management"
   username: "guest"
   password: "guest"
-  id: 000
+  id: "001"
 
 imagePullSecrets:
   - name: harbor-local
