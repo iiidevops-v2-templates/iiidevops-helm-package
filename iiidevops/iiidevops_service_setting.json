@@ -364,5 +364,25 @@
                 }
             ]
         }
+    },
+    "InfluxDB": {
+        "2.5.1": {
+            "chart_name": "influxdb",
+            "chart_version": "1.0.0",
+            "version": "2.5.1",
+            "arguments": [
+                {
+                    "key": "influxdb.id",
+                    "input_type": "id"
+                },
+                {
+                    "key": "persistence.enabled",
+                    "size": "persistence.size",
+                    "value": "false",
+                    "display": "enable_volume",
+                    "input_type": "volume"
+                }
+            ]
+        }
     }
 }
