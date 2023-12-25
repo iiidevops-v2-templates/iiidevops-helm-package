@@ -1,4 +1,4 @@
-## 部署開發用 InfluxDB
+## 部署開發用 Redis
 - :warning: 此部署僅為測試環境開發階段使用，為單節點配置，如需部署至 Production 環境，請另外修改配置設定, 不要直接使用
 - :information_source: 這部署並無配置永久資料儲存功能(符合開發情境提供快速還原乾淨環境的作法)，只要專案 repo 有commit更動就會進行資料重置，請commit/push前要謹慎注意。
 
@@ -6,6 +6,27 @@
 
 ### 啟動自動匯入資料的方式
 
-1. 目前 [influxdb-docker](https://hub.docker.com/_/influxdb) 使用 2.5.1 的版本，可依需求進行調整。(1.x 版本與 2.x 版本相容性差，使用 1.X 版本前請謹慎考慮)
-2. 建置完成後，請從「實證環境」中的服務進入設定。(username, password, org, bucket，以及取得 API token)
-3. 資料匯入等功能，influxDB網站內部有介紹檔案上傳(csv)，以及使用程式上傳(多語言，例如 JavaScript/Node.js, Python 等等)
+1. 目前 [Redis](https://hub.docker.com/_/redis) 使用 6.2.11 的版本，可依需求進行調整。
+2. 可修改 k8s/redis-config.yaml 內的設定內容。
+3. 建置完成後，請從「實證環境」中獲取的服務連線資訊(IP:port)進入使用。
+
+### 簡易檢查方式
+
+- 例如「實證環境」中獲取的服務連線資訊是 10.20.0.91:32549
+- 可以使用 redis-cli 進行檢測 語法如下:
+```
+redis-cli -h 10.20.0.91 -p 32549 --stat
+------- data ------ --------------------- load -------------------- - child -
+keys       mem      clients blocked requests            connections
+0          853.21K  1       0       0 (+0)              1
+0          853.21K  1       0       1 (+0)              1
+0          853.21K  1       0       2 (+1)              1
+0          853.21K  1       0       3 (+1)              1
+0          853.21K  1       0       4 (+1)              1
+0          853.21K  1       0       5 (+1)              1
+0          853.21K  1       0       6 (+1)              1
+0          853.21K  1       0       7 (+1)              1
+0          853.21K  1       0       8 (+1)              1
+0          853.21K  1       0       9 (+1)              1
+```
+
