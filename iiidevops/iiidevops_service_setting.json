@@ -111,35 +111,6 @@
             ]
         }
     },
-    "Microsoft SQL Server Linux": {
-        "2019": {
-            "chart_name": "mssql-server",
-            "chart_version": "1.0.0",
-            "version": "2019",
-            "arguments": [
-                {
-                    "key": "auth.saPassword",
-                    "display": "Microsoft SQL Server Password for sa",
-                    "input_type": "password"
-                },
-                {
-                    "key": "mssql.id",
-                    "input_type": "id"
-                },
-                {
-                    "key": "persistence.enabled",
-                    "size": "persistence.size",
-                    "value": "false",
-                    "display": "enable_volume",
-                    "input_type": "volume"
-                },
-                {
-                    "display": "SQL",
-                    "input_type": "upload_file"
-                }
-            ]
-        }
-    },
     "PostgreSQL": {
         "13.13.0": {
             "chart_name": "postgres",
@@ -336,6 +307,59 @@
                 },
                 {
                     "display": "SQL",
+                    "input_type": "upload_file"
+                }
+            ]
+        }
+    },
+    "Microsoft SQL Server Linux": {
+        "2019": {
+            "chart_name": "mssql-server",
+            "chart_version": "1.0.0",
+            "version": "2019",
+            "arguments": [
+                {
+                    "key": "auth.saPassword",
+                    "display": "Microsoft SQL Server Password for sa",
+                    "input_type": "password"
+                },
+                {
+                    "key": "mssql.id",
+                    "input_type": "id"
+                },
+                {
+                    "key": "persistence.enabled",
+                    "size": "persistence.size",
+                    "value": "false",
+                    "display": "enable_volume",
+                    "input_type": "volume"
+                },
+                {
+                    "display": "SQL",
+                    "input_type": "upload_file"
+                }
+            ]
+        }
+    },
+    "ElasticSearch": {
+        "7.17.10": {
+            "chart_name": "elasticsearch",
+            "chart_version": "1.0.0",
+            "version": "7.17.10",
+            "arguments": [
+                {
+                    "key": "es.id",
+                    "input_type": "id"
+                },
+                {
+                    "key": "persistence.enabled",
+                    "size": "persistence.size",
+                    "value": "false",
+                    "display": "enable_volume",
+                    "input_type": "volume"
+                },
+                {
+                    "display": "imports.csv",
                     "input_type": "upload_file"
                 }
             ]
