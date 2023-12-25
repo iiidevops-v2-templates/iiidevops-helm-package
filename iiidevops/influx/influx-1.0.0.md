@@ -1,7 +1,6 @@
 ## 部署開發用 InfluxDB
 - :warning: 此部署僅為測試環境開發階段使用，為單節點配置，如需部署至 Production 環境，請另外修改配置設定, 不要直接使用
 - :information_source: 這部署並無配置永久資料儲存功能(符合開發情境提供快速還原乾淨環境的作法)，只要專案 repo 有commit更動就會進行資料重置，請commit/push前要謹慎注意。
-- 利用 ElasticSearch 範本進行修改，部份文檔仍為 ElasticSearch
 
 ## 使用說明
 
