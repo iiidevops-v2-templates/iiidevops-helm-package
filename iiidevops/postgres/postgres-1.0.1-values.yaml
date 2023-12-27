@@ -1,0 +1,82 @@
+### IIIdevops Commons ###
+pipeline:
+  # The pipeline sequence
+  sequence: 0
+  # The default timeout seconds for the job
+  timeout: 3600
+  # The default seconds to delete the job after finished
+  ttlSecondsAfterFinished: null
+  # Failed jobs limit
+  backoffLimit: 3
+
+# The iiidevops API usage
+api:
+  # The iiidevops API URL
+  url: ""
+  # The iiidevops API username
+  username: ""
+  # The iiidevops API password
+  password: ""
+
+git:
+  repoName: "project"
+
+harbor:
+  host: "localhost:32443"
+
+timezone:
+  tz: Asia/Taipei
+
+### Specific ###
+db:
+  gui: true
+  type: "postgresql"
+  username: "iiidevops"
+  password: "DevOps_123"
+  name: "iiidevops"
+  tag: "13"
+  id: "001"
+
+service:
+  type: NodePort
+
+
+## Configure extra options for liveness and readiness probes
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes)
+##
+livenessProbe:
+  enabled: true
+  initialDelaySeconds: 30
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
+
+readinessProbe:
+  enabled: true
+  initialDelaySeconds: 5
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
+
+## @section Persistence Parameters
+## Persistence Parameters
+## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+##
+persistence:
+  ## @param persistence.enabled Enable persistence using Persistent Volume Claims
+  ##
+  enabled: false
+  ## @param persistence.accessModes [array] Persistent Volume access modes
+  ##
+  accessModes:
+    - ReadWriteMany
+  ## @param persistence.size Persistent Volume size
+  ##
+  size: 100Mi
+
+kube:
+  ingress:
+    base_domain: ""
+    proxy_body_size: "100m"

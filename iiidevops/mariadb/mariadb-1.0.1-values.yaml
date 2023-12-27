@@ -1,0 +1,52 @@
+# The iiidevops API usage
+api:
+  # The iiidevops API URL
+  url: ""
+  # The iiidevops API username
+  username: ""
+  # The iiidevops API password
+  password: ""
+
+git:
+  repoName: "project"
+
+harbor:
+  host: "localhost:32443"
+
+timezone:
+  tz: Asia/Taipei
+
+### Specific ###
+
+db:
+  gui: true
+  type: "mariadb"
+  username: "iiidevops"
+  password: "DevOps_123"
+  name: "iiidevops"
+  tag: "10.5"
+  id: "001"
+
+service:
+  type: NodePort
+
+## @section Persistence Parameters
+## Persistence Parameters
+## ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+##
+persistence:
+  ## @param persistence.enabled Enable persistence using Persistent Volume Claims
+  ##
+  enabled: false
+  ## @param persistence.accessModes [array] Persistent Volume access modes
+  ##
+  accessModes:
+    - ReadWriteMany
+  ## @param persistence.size Persistent Volume size
+  ##
+  size: 100Mi
+
+kube:
+  ingress:
+    base_domain: ""
+    proxy_body_size: "100m"
