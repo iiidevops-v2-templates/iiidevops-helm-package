@@ -315,7 +315,7 @@
     "Microsoft SQL Server Linux": {
         "2019": {
             "chart_name": "mssql-server",
-            "chart_version": "1.0.1",
+            "chart_version": "1.0.2",
             "version": "2019",
             "arguments": [
                 {
@@ -344,7 +344,7 @@
     "ElasticSearch": {
         "7.17.10": {
             "chart_name": "elasticsearch",
-            "chart_version": "1.0.1",
+            "chart_version": "1.0.2",
             "version": "7.17.10",
             "arguments": [
                 {
