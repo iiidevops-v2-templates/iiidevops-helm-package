@@ -1,0 +1,46 @@
+### IIIdevops Commons ###
+pipeline:
+  # The pipeline sequence
+  sequence: 0
+  # The default timeout seconds for the job
+  timeout: 3600
+  # The default seconds to delete the job after finished
+  ttlSecondsAfterFinished: null
+
+# The iiidevops API usage
+api:
+  # The iiidevops API URL
+  url: ""
+  # The iiidevops API username
+  username: ""
+  # The iiidevops API password
+  password: ""
+
+git:
+  url: "http://gitlab.your.domain/project.git"
+  repoName: "project"
+  branch: "master"
+  commitID: "abc1234"
+  token: "glpat-xxxxxxxxx"
+
+harbor:
+  host: "localhost:32443"
+
+timezone:
+  tz: Asia/Taipei
+
+### Specific ###
+
+image:
+  repository: library/anchore-runner
+  pullPolicy: Always
+  pullSecrets: []
+  
+anchore:
+  runnerVersion: 0.1.6
+  type: "image"
+  image: ""
+  # The Harbor Bot username
+  bot_user: ""
+  # The Harbor Bot password
+  bot_password: ""
