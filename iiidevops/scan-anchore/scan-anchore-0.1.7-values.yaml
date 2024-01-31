@@ -32,7 +32,7 @@ timezone:
 ### Specific ###
 
 image:
-  repository: library/anchore-runner
+  repository: dockerhub/iiiorg/anchore-runner
   pullPolicy: Always
   pullSecrets: []
   
